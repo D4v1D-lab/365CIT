@@ -10,47 +10,47 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<form>
-    <p>
-        <select asp-for="NoteBook" asp-items="Model.Notes">
-            <option value="">Book</option>
-        </select>
-        Keyword: <input type="text" asp-for="SearchString" />
-        <input type="submit" value="Filter" />
-    </p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by note or book:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Full List</a>
+        </p>
+    </div>
 </form>
-
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Canon)
+                @Html.DisplayNameFor(model => model.Scriptures[0].Canon)
             </th>
             
             <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.BookSort">
-                    @Html.DisplayNameFor(model => model.Scripture[0].Book)
+                    @Html.DisplayNameFor(model => model.Scriptures[0].Book)
                 </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Chapter)
+                @Html.DisplayNameFor(model => model.Scriptures[0].Chapter)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Verses)
+                @Html.DisplayNameFor(model => model.Scriptures[0].Verses)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Notes)
+                @Html.DisplayNameFor(model => model.Scriptures[0].Notes)
             </th>
             <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
-                    @Html.DisplayNameFor(model => model.Scripture[0].CreatedDate)
+                    @Html.DisplayNameFor(model => model.Scriptures[0].CreatedDate)
                 </a>
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Scripture)
+        @foreach (var item in Model.Scriptures)
         {
             <tr>
                 <td>

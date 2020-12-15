@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lU6wpxwk203z+cHEVWuxycqDHDRSjjMZH7y+uKramNMJVbVKZleZi6g6DYY5ZZsSQX8uQuSSF7t/rO/6xF1Uxw==",
+  "dgSpecHash": "IT5+ATe8fJ0sg5z/+Rs8DsjvPLNCi7feStEDJu5HKgSSXaC2E56AmLwo5JERct0AM/nO5FDD1Gasl+6cytKByw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\David\\source\\repos\\365CIT\\week7\\MyScriptureJournal\\MyScriptureJournal\\MyScriptureJournal.csproj",
+  "projectFilePath": "C:\\Users\\David\\Source\\Repos\\week7\\week7\\MyScriptureJournal\\MyScriptureJournal\\MyScriptureJournal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\David\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

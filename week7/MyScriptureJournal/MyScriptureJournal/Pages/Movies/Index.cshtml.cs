@@ -19,7 +19,7 @@ namespace MyScriptureJournal.Pages.Movies
             _context = context;
         }
 
-        public IList<Scripture> Scripture { get;set; }
+        public IList<Scripture> Scriptures { get;set; }
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
         public SelectList Notes { get; set; }
@@ -27,8 +27,9 @@ namespace MyScriptureJournal.Pages.Movies
         public string NoteBook { get; set; }
         public string BookSort { get; set; }
         public string DateSort { get; set; }
+        public string CurrentFilter { get; private set; }
 
-        public async Task OnGetAsync(string sortOrder)
+        public async Task OnGetAsync(string sortOrder, string searchString)
         {
 
             // Use LINQ to get list of genres(list of books).
@@ -54,9 +55,16 @@ namespace MyScriptureJournal.Pages.Movies
             BookSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
 
+            CurrentFilter = searchString;
+
             IQueryable<Scripture> columnSort = from s in _context.Scripture
                                                select s;
-       
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                columnSort = columnSort.Where(s => s.Notes.Contains(searchString)
+                                       || s.Book.Contains(searchString));
+            }
+
 
             switch (sortOrder)
             {
@@ -74,8 +82,14 @@ namespace MyScriptureJournal.Pages.Movies
                     break;
             }
             Notes = new SelectList(await genreQuery.Distinct().ToListAsync());
-            Scripture = await searchbar.ToListAsync();
-      
+
+
+            Scriptures = await columnSort.AsNoTracking().ToListAsync();
+            var Column = await columnSort.ToListAsync();
+
+        
+
+            //Scripture = await searchbar.ToListAsync();
             //Scripture = await columnSort.AsNoTracking().ToListAsync();
         }
 

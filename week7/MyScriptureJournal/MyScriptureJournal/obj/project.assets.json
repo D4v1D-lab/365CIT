@@ -8826,11 +8826,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David\\source\\repos\\365CIT\\week7\\MyScriptureJournal\\MyScriptureJournal\\MyScriptureJournal.csproj",
+      "projectUniqueName": "C:\\Users\\David\\Source\\Repos\\week7\\week7\\MyScriptureJournal\\MyScriptureJournal\\MyScriptureJournal.csproj",
       "projectName": "MyScriptureJournal",
-      "projectPath": "C:\\Users\\David\\source\\repos\\365CIT\\week7\\MyScriptureJournal\\MyScriptureJournal\\MyScriptureJournal.csproj",
+      "projectPath": "C:\\Users\\David\\Source\\Repos\\week7\\week7\\MyScriptureJournal\\MyScriptureJournal\\MyScriptureJournal.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David\\source\\repos\\365CIT\\week7\\MyScriptureJournal\\MyScriptureJournal\\obj\\",
+      "outputPath": "C:\\Users\\David\\Source\\Repos\\week7\\week7\\MyScriptureJournal\\MyScriptureJournal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
